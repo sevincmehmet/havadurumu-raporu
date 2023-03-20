@@ -1,0 +1,17 @@
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid lightblue;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.header ,
+.footer {
+    color:  lightgray;
+}   
+.body img {
+    height:80%;
+    width:80%;
+}

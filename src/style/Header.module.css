@@ -1,0 +1,15 @@
+.header {
+    width: auto;
+    background-color: lightgray;
+    padding: 0.4rem 0;        
+}
+
+.citys{
+    padding: 0.7rem 2rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(132, 132, 219, 0.422);
+    color: #fff;
+    font-weight: 800;
+}
