@@ -3,16 +3,16 @@ import CardsBody from "./component/CardsBody";
 
 import "./App.css";
 
-import { WheatherProvider } from "./context/WheatherContext";
+import { APIContextProvider } from "./context/apiContext";
 
 function App() {
   return (
-    <WheatherProvider>
+    <APIContextProvider>
       <div className="App">
         <Header />
         <CardsBody />
       </div>
-    </WheatherProvider>
+    </APIContextProvider>
   );
 }
 

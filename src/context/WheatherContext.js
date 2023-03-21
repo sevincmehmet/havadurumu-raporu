@@ -14,7 +14,7 @@ export const WheatherProvider = ({ children }) => {
         fetch(`http://api.weatherapi.com/v1/forecast.json?key=${APP_KEY}&q=London&days=7&aqi=no&alerts=no
         `)
         .then((res)=> res.json())
-        .then(data => {setWheather(data); setLoading(false)})
+        .then(data => {setWheather(data.forecast.forecastday); setLoading(false)})
         .catch((error) => console.log(error));
     }, [])
 

@@ -1,20 +1,28 @@
-import CardsCss from "../style/Cards.module.css"
+import { useAPI } from "../context/apiContext";
+import CardsCss from "../style/Cards.module.css";
 
-const Cards = () => {
+const Cards = ({ date, maxTemp, minTemp, icon }) => {
+    const { loading } = useAPI();
 
-    return(
+    return (
         <>
-            <div className={CardsCss.card}>
-                <div className={CardsCss.header}>Wed</div>
-                <div className={CardsCss.body}>
-                    {/* <img src="" alt="" /> */}
-                    images
+            {loading ? (
+                <div className={CardsCss.card}> 
+                    Loading...
                 </div>
-                <div className={CardsCss.footer}>
-                    <span> 77.</span><span>68.</span>
+            ) : (
+                <div className={CardsCss.card}>
+                    <div className={CardsCss.header}>{ date }</div>
+                    <div className={CardsCss.body}>
+                        <img src={icon} alt="" style={{width: "80%"}}/>
+                    </div>
+                    <div className={CardsCss.footer}>
+                        <span> {maxTemp}</span> {` `}
+                        <span>{minTemp}</span>
+                    </div>
                 </div>
-            </div>
+            )}
         </>
-    )
-}
+    );
+};
 export default Cards;
